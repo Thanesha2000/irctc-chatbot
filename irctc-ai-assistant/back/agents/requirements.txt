@@ -1,0 +1,11 @@
+@"
+fastapi
+uvicorn[standard]
+google-genai
+python-dotenv
+sentence-transformers
+faiss-cpu
+pymupdf
+langchain-text-splitters
+numpy
+"@ 

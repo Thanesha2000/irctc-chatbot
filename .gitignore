@@ -39,3 +39,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary Hugging Face push repo
+irctc-ai-assistant/hf_push_temp/
+

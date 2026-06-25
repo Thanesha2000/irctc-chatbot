@@ -52,9 +52,15 @@ app = FastAPI(
 # =====================================================================
 
 
+import os
+
+# Dynamic CORS configuration for deployment
+cors_origins_raw = os.getenv("CORS_ORIGINS", "*")
+origins = [o.strip() for o in cors_origins_raw.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )

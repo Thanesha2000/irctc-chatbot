@@ -144,7 +144,8 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("/api/chat", {
+      const apiBase = import.meta.env.VITE_API_URL || "/api";
+      const response = await axios.post(`${apiBase}/chat`, {
         message: userMessage.text,
       });
 
